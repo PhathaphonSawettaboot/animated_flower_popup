@@ -1,7 +1,10 @@
+@import url(https://fonts.googleapis.com/css?family=Dancing+Script:400,700);
+
 body,
 html {
   height: 100%;
   margin: 0;
+  font-family: "Dancing Script";
 }
 
 .background {
@@ -12,14 +15,6 @@ html {
   height: 100%;
   overflow: hidden;
   position: relative;
-}
-
-#moreBtn {
-  position: fixed;
-  left: 50%;
-  transform: translateX(-50%);
-  padding: 10px 20px;
-  font-size: 16px;
 }
 
 .sunflower {
@@ -102,6 +97,59 @@ html {
   height: auto; /* Maintain aspect ratio */
 }
 
+/* btn */
+#moreBtn {
+  padding: 10px 20px; /* Add some padding around the text */
+  background-color: #4caf50; /* Set a background color */
+  color: white; /* Text color */
+  border: none; /* Remove the default border */
+  border-radius: 5px; /* Add rounded corners */
+  cursor: pointer; /* Change mouse pointer on hover */
+  outline: none; /* Remove the focus outline */
+  font-size: 30px; /* Increase the font size */
+  font-weight: bold; /* Make the text bold */
+  font-family: "Dancing Script";
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  transition: all 0.3s; /* Smooth transition for hover effects */
+  position: fixed; /* Fixed position */
+  top: 5vh!important; /* Position from the bottom */
+  left: 50%; /* Centering from the left */
+  transform: translateX(-50%); /* Precise centering */
+  z-index: 1000; /* Ensure it's above everything else */
+}
+
+#moreBtn:hover {
+  background-color: #45a049; /* Darken the background on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Increase the shadow on hover */
+}
+
+#moreBtn:active {
+  background-color: #3e8e41; /* Even darker background when active/clicked */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Small shadow for a "pressed" effect */
+}
+
+#displayText {
+  font-family: monospace;
+  text-align: center; /* Center the text */
+  padding: 30px 20px; /* Space between the button and the text */
+  font-size: 22px;
+}
+
+@media (min-width: 768px) {
+    #moreBtn {
+        margin-top: 3vh!important;
+        width: 30vh;
+        font-size: 25px;
+        top: 21vh!important;
+      }
+      #displayText {
+        font-family: monospace;
+        text-align: center; /* Center the text */
+        padding: 30px 20px; /* Space between the button and the text */
+        font-size: 22px;
+      }
+}
+
 /* Media query for tablets */
 @media (max-width: 768px) {
   .bush.left {
@@ -109,6 +157,24 @@ html {
   }
   .bush.right {
     right: -23%;
+  }
+  .displayText {
+    font-family: monospace;
+    text-align: center; /* Center the text */
+    padding: 30px 20px; /* Space between the button and the text */
+    font-size: 5px;
+  }
+  #moreBtn {
+    margin-top: 3vh!important;
+    width: 30vh;
+    font-size: 20px;
+    top: 22vh!important;
+  }
+  .displayText {
+    font-family: monospace;
+    text-align: center; /* Center the text */
+    padding: 30px 20px; /* Space between the button and the text */
+    font-size: 14px!important;
   }
 }
 
@@ -129,22 +195,43 @@ html {
     right: -30%;
     width: 30vh; /* Smaller width for right bush on mobile */
   }
-  .left-butterfly{
+  .left-butterfly {
     left: 9%;
     width: 10vh;
     top: 50%;
   }
-  .right-butterfly{
+  .right-butterfly {
     right: 5%;
     width: 8vh;
     top: 75%;
   }
-  .white-flower{
+  .white-flower {
     top: 55%;
     width: 50vh;
   }
-  .wink{
+  .wink {
     top: 66%;
     width: 20vh;
   }
+  #moreBtn {
+    margin-top: 15vh!important;
+    width: 30vh;
+    font-size: 20px;
+    top:22vh!important;
+  }
+  .displayText {
+    font-family: monospace;
+    text-align: center; /* Center the text */
+    padding: 30px 20px; /* Space between the button and the text */
+    font-size: 12px!important;
+  }
+}
+
+@media (max-width: 375px) {
+    #moreBtn {
+        margin-top: 19vh;
+        width: 30vh;
+        font-size: 20px;
+        top: 26vh!important;
+      }
 }
