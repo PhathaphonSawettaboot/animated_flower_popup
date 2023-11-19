@@ -62,10 +62,44 @@ html {
   right: -13%;
 }
 
-.sunflower {
+.white-flower {
   position: absolute;
-  z-index: 1;
-  /* Lower than the bushes */
+  z-index: 3; /* Higher than any other element to ensure it's on top */
+  width: 100vh; /* Adjust the size as necessary */
+  height: auto; /* Maintain aspect ratio */
+  position: absolute;
+  top: 30vh;
+  left: 5%;
+}
+
+.butterfly {
+  position: absolute;
+  z-index: 10; /* Ensures butterflies are on top of everything else */
+  /* Set a specific width or height if necessary */
+}
+
+.left-butterfly {
+  width: 15vh;
+  left: 15%;
+  top: 53%; /* Adjust the position as needed */
+  transform: translateY(-50%); /* Center the butterfly vertically */
+}
+
+.right-butterfly {
+  width: 12vh;
+  right: 15%;
+  top: 63%; /* Adjust the position as needed */
+  transform: translateY(-50%); /* Center the butterfly vertically */
+}
+
+.wink {
+  position: absolute;
+  z-index: 999; /* A high value to ensure it's on top of everything */
+  top: 50%; /* Adjust as needed */
+  left: 50%; /* Adjust as needed */
+  transform: translate(-50%, -50%); /* Center the wink */
+  width: 25vh; /* Adjust the size as necessary */
+  height: auto; /* Maintain aspect ratio */
 }
 
 /* Media query for tablets */
@@ -82,7 +116,7 @@ html {
 @media (max-width: 480px) {
   .sunflower {
     width: 30vh;
-    margin-top: 80vh;
+    top: 50%;
   }
   .bush.left {
     left: -25%;
@@ -94,5 +128,23 @@ html {
   .bush.right {
     right: -30%;
     width: 30vh; /* Smaller width for right bush on mobile */
+  }
+  .left-butterfly{
+    left: 9%;
+    width: 10vh;
+    top: 50%;
+  }
+  .right-butterfly{
+    right: 5%;
+    width: 8vh;
+    top: 75%;
+  }
+  .white-flower{
+    top: 55%;
+    width: 50vh;
+  }
+  .wink{
+    top: 66%;
+    width: 20vh;
   }
 }
