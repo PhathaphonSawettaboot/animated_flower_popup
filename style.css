@@ -7,6 +7,16 @@ html {
   font-family: "Dancing Script";
 }
 
+@keyframes wiggle {
+  0%,
+  100% {
+    transform: rotate(-3deg);
+  }
+  50% {
+    transform: rotate(3deg);
+  }
+}
+
 .background {
   background-image: url("asset/bg.png");
   /* Replace with your background image path */
@@ -78,6 +88,7 @@ html {
   left: 15%;
   top: 53%; /* Adjust the position as needed */
   transform: translateY(-50%); /* Center the butterfly vertically */
+  animation: wiggle 1s infinite;
 }
 
 .right-butterfly {
@@ -85,6 +96,7 @@ html {
   right: 15%;
   top: 63%; /* Adjust the position as needed */
   transform: translateY(-50%); /* Center the butterfly vertically */
+  animation: wiggle 1s infinite;
 }
 
 .wink {
@@ -112,7 +124,7 @@ html {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
   transition: all 0.3s; /* Smooth transition for hover effects */
   position: fixed; /* Fixed position */
-  top: 5vh!important; /* Position from the bottom */
+  top: 5vh !important; /* Position from the bottom */
   left: 50%; /* Centering from the left */
   transform: translateX(-50%); /* Precise centering */
   z-index: 1000; /* Ensure it's above everything else */
@@ -136,18 +148,18 @@ html {
 }
 
 @media (min-width: 768px) {
-    #moreBtn {
-        margin-top: 3vh!important;
-        width: 30vh;
-        font-size: 25px;
-        top: 21vh!important;
-      }
-      #displayText {
-        font-family: monospace;
-        text-align: center; /* Center the text */
-        padding: 30px 20px; /* Space between the button and the text */
-        font-size: 22px;
-      }
+  #moreBtn {
+    margin-top: 3vh !important;
+    width: 30vh;
+    font-size: 25px;
+    top: 21vh !important;
+  }
+  #displayText {
+    font-family: monospace;
+    text-align: center; /* Center the text */
+    padding: 30px 20px; /* Space between the button and the text */
+    font-size: 22px;
+  }
 }
 
 /* Media query for tablets */
@@ -165,16 +177,16 @@ html {
     font-size: 5px;
   }
   #moreBtn {
-    margin-top: 3vh!important;
+    margin-top: 3vh !important;
     width: 30vh;
     font-size: 20px;
-    top: 22vh!important;
+    top: 22vh !important;
   }
   .displayText {
     font-family: monospace;
     text-align: center; /* Center the text */
     padding: 30px 20px; /* Space between the button and the text */
-    font-size: 14px!important;
+    font-size: 14px !important;
   }
 }
 
@@ -214,24 +226,24 @@ html {
     width: 20vh;
   }
   #moreBtn {
-    margin-top: 15vh!important;
+    margin-top: 15vh !important;
     width: 30vh;
     font-size: 20px;
-    top:22vh!important;
+    top: 22vh !important;
   }
   .displayText {
     font-family: monospace;
     text-align: center; /* Center the text */
     padding: 30px 20px; /* Space between the button and the text */
-    font-size: 12px!important;
+    font-size: 12px !important;
   }
 }
 
 @media (max-width: 375px) {
-    #moreBtn {
-        margin-top: 19vh;
-        width: 30vh;
-        font-size: 20px;
-        top: 26vh!important;
-      }
+  #moreBtn {
+    margin-top: 19vh;
+    width: 30vh;
+    font-size: 20px;
+    top: 26vh !important;
+  }
 }
